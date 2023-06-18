@@ -85,25 +85,32 @@
             </div>
         </div>
 
-        <!-- baitap4 -->
-        <div class="card w-25 my-5">
-            <div class="card-header">
-                <h3>Bài tập 4: Tính diện tích, chu vi hình chữ nhật</h3>
+        
+          <!--  tính tiền cáp -->
+      
+          <div class="form-control w-75 mx-auto d-grid mt-5 ">
+            <h1 class="text-center"> Tính Tiền Cáp</h1>
+            <label for="input-code">Nhập Mã Khách Hàng</label>
+            <input type="text" name="" id="input-code">
+            <label for="typeCustomer"> Chọn loại khách hàng</label>
+            <select name="" id="typeCustomer" onchange="changeSelection()">
+              <option value=""></option>
+              <option value="business">Doanh Nghiệp</option>
+              <option value="person">Cá Nhân</option>
+            </select>
+            <div id="input-connect" style="display: none;">
+              <label for="enterConnect"> Nhập Số kết nối</label>
+              <input type="number" id="enterConnect" class="d-block">
             </div>
-            <div class="card-body">
-                <p>Nhập chiều dài:</p>
-                <input type="text" class="form-control mb-3 w-100" id="chieuDai" />
-                <p>Nhập chiều rộng</p>
-                <input type="text" class="form-control mb-3 w-100" id="chieuRong" />
-                <button class="btn btn-success" id="btnchuNhat" onclick="baitap4()">
-                    Tính
-                </button>
+            <label for="enterVip">Số Kênh Cao Cấp</label>
+            <input type="number" name="" id="enterVip">
+            <button class="btn btn-primary d-block my-2" onclick="resultInter()"> Số
+              tiền phải trả</button>
+            <div class="ps-2 border m-2">
+              <h4>Mã khách hàng</h4>
+              <div id="output-Inter"></div>
             </div>
-            <div class="card-footer">
-                <p>Chu vi: <span id="chuVi"></span></p>
-                <p>Diện tích: <span id="dienTich"></span></p>
             </div>
-        </div>
     </div>
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
